@@ -67,7 +67,7 @@ document.getElementById('weightOutputUnit').addEventListener('change', convertWe
 document.getElementById('weightInputValue').addEventListener('input', convertWeight);
 
 function convertWeight() {
-    let inputValue = parseFloat(document.getElementById('weightInputValue').value);
+    let inputValue = parseFloat(document.getElementById('weightInputValue').value) || 0;
     let inputUnit = document.getElementById('weightInputUnit').value;
     let outputUnit = document.getElementById('weightOutputUnit').value;
 
