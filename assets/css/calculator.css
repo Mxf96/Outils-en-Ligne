@@ -51,3 +51,20 @@
 .calculator button#equals:hover {
     background-color: #218838;
 }
+
+/* Ajout de Media Queries pour différents écrans */
+@media (max-width: 768px) { /* Pour les tablettes */
+    .calculator {
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) { /* Pour les téléphones mobiles */
+    .calculator input#display {
+        font-size: 16px;
+    }
+
+    .calculator button {
+        font-size: 16px;
+    }
+}

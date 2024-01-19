@@ -78,3 +78,25 @@
 .converter-container .output-group input[readonly] {
     background-color: #e9ecef;
 }
+
+/* Ajout de Media Queries pour différents écrans */
+@media (max-width: 768px) { /* Pour les tablettes */
+    .converter-container,
+    .measurement-converter-container,
+    .weight-converter-container,
+    .currency-converter-container {
+        max-width: 90%;
+        margin: 10px auto;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) { /* Pour les téléphones mobiles */
+    .converter-container select,
+    .measurement-converter-container select,
+    .weight-converter-container select,
+    .currency-converter-container select {
+        width: 100%;
+        margin: 10px 0;
+    }
+}

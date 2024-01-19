@@ -62,3 +62,26 @@ footer {
 .tool-section h2 {
     color: #007bff;
 }
+
+/* Ajout de Media Queries pour différents écrans */
+@media (max-width: 768px) { /* Pour les tablettes */
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    footer {
+        position: static;
+        padding: 15px 0;
+    }
+}
+
+@media (max-width: 480px) { /* Pour les téléphones mobiles */
+    header, footer {
+        padding: 15px 0;
+    }
+
+    nav ul {
+        padding: 15px;
+    }
+}

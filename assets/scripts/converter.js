@@ -61,7 +61,7 @@ function convertFromMeters(value, unit) {
     }
 }
 
-// Écouteurs d'événements pour le convertisseur de poids
+// Convertisseur de poids
 document.getElementById('weightInputUnit').addEventListener('change', convertWeight);
 document.getElementById('weightOutputUnit').addEventListener('change', convertWeight);
 document.getElementById('weightInputValue').addEventListener('input', convertWeight);
@@ -107,9 +107,10 @@ function convertFromKilograms(value, unit) {
     }
 }
 
-// Écouteurs d'événements pour le convertisseur de monnaie
-document.getElementById('currencyInputValue').addEventListener('input', convertCurrency);
+// Convertisseur de monnaie
+document.getElementById('currencyInputUnit').addEventListener('change', convertCurrency);
 document.getElementById('currencyOutputUnit').addEventListener('change', convertCurrency);
+document.getElementById('currencyInputValue').addEventListener('input', convertCurrency);
 
 function convertCurrency() {
     let inputValue = parseFloat(document.getElementById('currencyInputValue').value) || 0;
@@ -122,27 +123,26 @@ function convertCurrency() {
 
 function convertFromEuros(value, unit) {
     // Assurez-vous que ces taux de change correspondent à ceux dans votre menu déroulant
-    const exchangeRatesFromEuros = {
-        "USD": 1.09,
-        "JPY": 161.09,
-        "GBP": 0.86,
-        "AUD": 1.65,
-        "CAD": 1.47,
-        "CHF": 0.95,
-        "CNY": 7.84,
-        "SEK": 11.38,
-        "NOK": 11.38,
-        "KRW": 1449.87,
-        "SGD": 1.46,
-        "HKD": 8.51,
-        "INR": 90.37,
-        "MXN": 18.65,
-        "ZAR": 20.63,
-        "RUB": 97.28,
-        "NZD": 1.78,
-        "BRL": 5.36,
-        "ARS": 891.42
+    switch(unit){
+        case "USD": return value * 1.09;
+        case "JPY": return value * 161.09;
+        case "GBP": return value * 0.86;
+        case "AUD": return value * 1.65;
+        case "CAD": return value * 1.47;
+        case "CHF": return value * 0.95;
+        case "CNY": return value * 7.84;
+        case "SEK": return value * 11.38;
+        case "NOK": return value * 11.38;
+        case "KRW": return value * 1449.87;
+        case "SGD": return value * 1.46;
+        case "HKD": return value * 8.51;
+        case "INR": return value * 90.37;
+        case "MXN": return value * 18.65;
+        case "ZAR": return value * 20.63;
+        case "RUB": return value * 97.28;
+        case "NZD": return value * 1.78;
+        case "BRL": return value * 5.36;
+        case "ARS": return value * 891.42;
+        default: return value;
     };
-
-    return value * (exchangeRatesFromEuros[unit] || 1);
 }

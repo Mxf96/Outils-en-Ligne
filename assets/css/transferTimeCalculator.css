@@ -77,3 +77,26 @@
     font-weight: bold;
     font-size: 1.2em;
 }
+
+/* Ajout de Media Queries pour différents écrans */
+@media (max-width: 768px) { /* Pour les tablettes */
+    .transfer-time-calculator {
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 480px) { /* Pour les téléphones mobiles */
+    .transfer-time-calculator input,
+    .transfer-time-calculator select {
+        width: 90%;
+        margin: 10px 0;
+    }
+
+    .transfer-time-calculator button {
+        width: 90%;
+    }
+
+    .transfer-time-calculator #resultTime {
+        font-size: 1em;
+    }
+}
