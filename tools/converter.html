@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Convertisseur</title>
+        <link rel="stylesheet" href="/assets/css/styles.css">
+        <link rel="stylesheet" href="/assets/css/converter.css">
+    </head>
+    <body>
+        <header>
+            <h1>Convertisseur</h1>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="/">Accueil</a></li>
+                <li><a href="/tools/calculator.html">Calculatrice</a></li>
+                <li><a href="/tools/converter.html">Convertisseur</a></li>
+                <li><a href="/tools/transferTimeCalculator.html">Calculateur de Temps de Transfert</a></li>
+            </ul>
+        </nav>
+        <div class="converter-container">
+            <h2>Convertisseur</h2>
+            <select id="conversionType">
+                <option value="">Sélectionner un type de conversion</option>
+                <option value="measure">Mesure</option>
+                <option value="weight">Poids</option>
+                <option value="currency">Monnaie</option>
+            </select>
+        </div>
+        <div class="measurement-converter-container" style="display: none;">
+            <h2>Convertisseur de Mesures</h2>
+            <div class="input-group">
+                <input type="number" id="inputValue" placeholder="Entrez une valeur">
+                <select id="inputUnit">
+                    <option value="km">Kilomètre</option>
+                    <option value="m">Mètre</option>
+                    <option value="dm">Décimètre</option>
+                    <option value="cm">Centimètre</option>
+                    <option value="mm">Millimètre</option>
+                    <option value="miles">Miles</option>
+                    <option value="inches">Pouces</option>
+                    <option value="micrometer">Micromètre</option>
+                    <option value="nanometer">Nanomètre</option>
+                    <option value="yard">Yard</option>
+                    <option value="foot">Pied</option>
+                    <option value="nautical_mile">Mile marin</option>
+                </select>
+            </div>
+            <div class="output-group">
+                <input type="number" id="outputValue" placeholder="Valeur convertie" readonly>
+                <select id="outputUnit">
+                    <option value="km">Kilomètre</option>
+                    <option value="m">Mètre</option>
+                    <option value="dm">Décimètre</option>
+                    <option value="cm">Centimètre</option>
+                    <option value="mm">Millimètre</option>
+                    <option value="miles">Miles</option>
+                    <option value="inches">Pouces</option>
+                    <option value="micrometer">Micromètre</option>
+                    <option value="nanometer">Nanomètre</option>
+                    <option value="yard">Yard</option>
+                    <option value="foot">Pied</option>
+                    <option value="nautical_mile">Mile marin</option>                
+                </select>
+            </div>
+        </div>
+        <div class="weight-converter-container" style="display: none;">
+            <h2>Convertisseur de Poids</h2>
+            <div class="input-group">
+                <input type="number" id="weight-InputValue" placeholder="Entrez une valeur">
+                <select id="weightInputUnit">
+                    <option value="t">Tonne</option>
+                    <option value="kg">Kilogramme</option>
+                    <option value="g">Gramme</option>
+                    <option value="mg">Milligramme</option>
+                    <option value="short_ton">Tonne courte</option>
+                    <option value="long_ton">Tonne longue</option>
+                    <option value="stone">Stone</option>
+                    <option value="lb">Livre (Pound)</option>
+                    <option value="oz">Once</option>
+                </select>
+            </div>
+            <div class="output-group">
+                <input type="number" id="weightOutputValue" placeholder="Valeur convertie" readonly>
+                <select id="weightOutputUnit">
+                    <option value="t">Tonne</option>
+                    <option value="kg">Kilogramme</option>
+                    <option value="g">Gramme</option>
+                    <option value="mg">Milligramme</option>
+                    <option value="short_ton">Tonne courte</option>
+                    <option value="long_ton">Tonne longue</option>
+                    <option value="stone">Stone</option>
+                    <option value="lb">Livre (Pound)</option>
+                    <option value="oz">Once</option>
+                </select>
+            </div>
+        </div>
+        <!-- Convertisseur de Monnaie -->
+        <div class="currency-converter-container" style="display: none;">
+            <h2>Convertisseur de Monnaie</h2>
+            <div class="input-group">
+                <input type="number" id="currencyInputValue" placeholder="Entrez une valeur en Euros">
+                <select id="currencyInputUnit">
+                    <option value="EUR">Euro (EUR)</option> <!-- Toujours en euros -->
+                </select>
+            </div>
+            <div class="output-group">
+                <input type="number" id="currencyOutputValue" placeholder="Valeur convertie" readonly>
+                <select id="currencyOutputUnit">
+                    <!-- Options pour différentes devises -->
+                    <option value="USD">Dollar américain (USD)</option>
+                    <option value="JPY":>Yen japonais</option>
+                    <option value="GBP":>Livre sterling britannique</option> 
+                    <option value="AUD":>Dollar australien</option> 
+                    <option value="CAD":>Dollar canadien</option> 
+                    <option value="CHF":>Franc suisse</option> 
+                    <option value="CNY":>Yuan chinois</option> 
+                    <option value="SEK":>Couronne suédoise</option>
+                    <option value="NOK":>Couronne norvégienne</option>
+                    <option value="KRW":>Won sud-coréen</option>
+                    <option value="SGD":>Dollar de Singapour</option> 
+                    <option value="HKD":>Dollar de Hong Kong</option> 
+                    <option value="INR":>Roupie indienne</option>
+                    <option value="MXN":>Peso mexicain</option>
+                    <option value="ZAR":>Rand sud-africain</option>
+                    <option value="RUB":>Rouble russe</option>
+                    <option value="NZD":>Dollar néo-zélandais</option> 
+                    <option value="BRL":>Real brésilien</option> 
+                    <option value="ARS":>Peso argentin</option>
+                </select>
+            </div>
+        </div>
+        <footer>
+            <p>&copy; - Outils en Ligne - 2024</p>
+        </footer>
+        <script src="/assets/scripts/converter.js"></script>
+    </body>
+</html>

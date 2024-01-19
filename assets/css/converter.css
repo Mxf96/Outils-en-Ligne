@@ -1,0 +1,80 @@
+.converter-container,
+.measurement-converter-container,
+.weight-converter-container,
+.currency-converter-container {
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.measurement-converter-container .input-group, 
+.measurement-converter-container .output-group,
+.weight-converter-container .input-group, 
+.weight-converter-container .output-group,
+.currency-converter-container .input-group, 
+.currency-converter-container .output-group {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.measurement-converter-container input, 
+.measurement-converter-container select,
+.weight-converter-container input, 
+.weight-converter-container select,
+.currency-converter-container input, 
+.currency-converter-container select  {
+    padding: 8px;
+    margin: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+.measurement-converter-container input[readonly],
+.weight-converter-container input[readonly],
+.currency-converter-container input[readonly] {
+    background-color: #e9ecef;
+}
+
+.converter-container select,
+.measurement-converter-container select,
+.weight-converter-container select,
+.currency-converter-container select {
+    padding: 8px;
+    margin-right: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: white;
+}
+
+/* Style pour les groupes d'entrée et de sortie */
+.converter-container .input-group, 
+.converter-container .output-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+/* Style pour les inputs et les selects dans les groupes */
+.converter-container .input-group input,
+.converter-container .input-group select,
+.converter-container .output-group input,
+.converter-container .output-group select {
+    flex: 1;
+    margin: 5px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+/* Style spécifique pour les inputs en lecture seule */
+.converter-container .output-group input[readonly] {
+    background-color: #e9ecef;
+}

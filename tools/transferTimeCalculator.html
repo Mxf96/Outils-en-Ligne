@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Calculateur de Temps de Transfert</title>
+        <link rel="stylesheet" href="/assets/css/styles.css">
+        <link rel="stylesheet" href="/assets/css/transferTimeCalculator.css">
+    </head>
+    <body>
+        <header>
+            <h1>Calculateur de Temps de Transfert</h1>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="/">Accueil</a></li>
+                <li><a href="/tools/calculator.html">Calculatrice</a></li>
+                <li><a href="/tools/converter.html">Convertisseur</a></li>
+                <li><a href="/tools/transferTimeCalculator.html">Calculateur de Temps de Transfert</a></li>
+            </ul>
+        </nav>
+        <div class="transfer-time-calculator">
+            <h2>Calculateur de Temps de Transfert</h2>
+            <div>
+                <label for="dataSize">Taille des données:</label>
+                <input type="number" id="dataSize" placeholder="Entrez la taille des données">
+                <select id="dataSizeUnit">
+                    <option value="KB">Ko (Kilobytes)</option>
+                    <option value="MB">Mo (Megabytes)</option>
+                    <option value="GB">Go (Gigabytes)</option>
+                    <option value="TB">To (Terabytes)</option>
+                </select>
+            </div>
+            <div>
+                <label for="speed">Vitesse de transfert (en Mbps):</label>
+                <input type="number" id="speed" placeholder="Entrez la vitesse de transfert">
+            </div>
+            <button onclick="calculateTransferTime()">Calculer</button>
+            <div>
+                Temps estimé pour le transfert: <span id="resultTime"></span>
+            </div>
+        </div>       
+        <footer>
+            <p>&copy; - Outils en Ligne - 2024</p>
+        </footer>
+        <script src="/assets/scripts/transferTimeCalculator.js"></script>
+    </body>
+</html>
