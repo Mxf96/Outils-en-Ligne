@@ -3,7 +3,7 @@
 .weight-converter-container,
 .currency-converter-container {
     max-width: 500px;
-    margin: 20px auto;
+    margin: 3% auto;
     padding: 20px;
     background-color: #fff;
     border-radius: 8px;
@@ -86,7 +86,7 @@
     .weight-converter-container,
     .currency-converter-container {
         max-width: 90%;
-        margin: 10px auto;
+        margin-top: 10%;
         padding: 15px;
     }
 }
@@ -97,6 +97,6 @@
     .weight-converter-container select,
     .currency-converter-container select {
         width: 100%;
-        margin: 10px 0;
+        margin-top: 10%;
     }
 }

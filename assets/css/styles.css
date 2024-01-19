@@ -45,9 +45,14 @@ footer {
     color: white;
     text-align: center;
     padding: 10px 0;
-    position: absolute;
+    position: fixed;
     bottom: 0;
     width: 100%;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;   
 }
 
 /* Style spécifique pour les outils */
@@ -71,7 +76,7 @@ footer {
     }
 
     footer {
-        position: absolute;
+        position: static;
         padding: 15px 0;
     }
 }
