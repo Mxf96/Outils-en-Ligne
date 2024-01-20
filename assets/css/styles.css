@@ -16,21 +16,27 @@ header {
     width: 100%; /* Assure que le header prend toute la largeur */
 }
 
-nav {
-    width: 97.2%; /* Assure que la nav prend toute la largeur */
+
+/* Keyframes pour l'animation slideDownFadeIn */
+@keyframes slideDownFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px); /* Commence 20px plus haut */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); /* Se déplace vers sa position normale */
+    }
 }
 
+/* Styles généraux pour nav ul */
 nav ul {
     list-style-type: none;
     padding: 20px;
     text-align: center;
     background-color: #333;
     margin: 0;
-    list-style-type: none;
-    padding: 20px;
-    text-align: center;
-    background-color: #333;
-    margin: 0;
+    border-radius: 10px;
 }
 
 nav ul li {
@@ -91,15 +97,41 @@ footer {
 }
 
 /* Ajout de Media Queries pour différents écrans */
-@media (max-width: 1024px) {
+@media (max-width: 2560px) {
     nav {
-        width: 96.1%;
+        width: 97.4%;
+        margin-left: 15px;
     }
 }
 
-@media (max-width: 768px) { /* Pour les tablettes */
+@media (min-width: 1441px) and (max-width: 2559px) {
     nav {
-        width: 100%;
+        width: 95%;
+    }
+}
+
+@media (max-width: 1440px) {
+    nav {
+        width: 95%;
+    }
+}
+
+@media (max-width: 1024px) {
+    nav {
+        width: 93%;
+    }
+}
+
+/* Media Query pour tablettes et téléphones mobiles */
+@media (max-width: 768px) {
+    /* Styles spécifiques pour les tablettes */
+    nav {
+        width: 96%;
+    }
+    
+    nav ul {
+        display: none; /* Commence avec le menu caché */
+        animation: slideDownFadeIn 1s ease forwards; /* Applique l'animation */
     }
     
     nav ul li {
@@ -112,17 +144,20 @@ footer {
     }
 }
 
-@media (max-width: 480px) { /* Pour les téléphones mobiles */
+@media (max-width: 480px) {
+    /* Styles spécifiques pour les téléphones mobiles */
     header, footer {
         padding: 15px 0;
     }
 
     nav {
-        width: 100%;
+        width: 91%;
     }
 
     nav ul {
         padding: 15px;
+        display: none; /* Commence avec le menu caché */
+        animation: slideDownFadeIn 1s ease forwards; /* Applique l'animation */
     }
 }
 

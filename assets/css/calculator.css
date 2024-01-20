@@ -55,11 +55,15 @@
 /* Ajout de Media Queries pour différents écrans */
 @media (max-width: 768px) { /* Pour les tablettes */
     .calculator {
-        width: 90%;
+        width: 50%;
     }
 }
 
 @media (max-width: 480px) { /* Pour les téléphones mobiles */
+    .calculator {
+        width: 60%;
+    }
+
     .calculator input#display {
         font-size: 16px;
     }
