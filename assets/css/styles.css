@@ -50,9 +50,12 @@ footer {
     width: 100%;
 }
 
-.footer {
-    position: absolute;
-    bottom: 0;   
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: auto; /* Clé pour que le footer soit en bas */
 }
 
 /* Style spécifique pour les outils */
@@ -76,8 +79,7 @@ footer {
     }
 
     footer {
-        position: static;
-        padding: 15px 0;
+        display: none;
     }
 }
 
@@ -88,5 +90,57 @@ footer {
 
     nav ul {
         padding: 15px;
+    }
+}
+
+/* Styles pour le bouton menu burger */
+.burger-menu {
+    display: none; /* Caché par défaut */
+    background-color: #007bff;
+    color: white;
+    border: none;
+    font-size: 1.5em;
+    padding: 0.5em;
+    cursor: pointer;
+}
+
+/* Style pour le menu déroulant */
+#nav-links {
+    display: flex; /* Afficher par défaut */
+    width: 100%;
+    justify-content: center;
+}
+
+#nav-links li {
+    margin: 0 10px; /* Espacement des liens */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+/* Media Queries pour les tablettes et téléphones */
+@media (max-width: 768px) {
+    .burger-menu {
+        display: block; /* Afficher le bouton burger */
+    }
+
+    #nav-links {
+        display: none; /* Cacher les liens par défaut */
+        flex-direction: column;
+        align-items: center;
+        background-color: #333; /* Arrière-plan pour le menu déroulant */
+        padding: 10px 0; /* Padding pour le menu déroulant */
+    }
+
+    #nav-links li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    nav ul {
+        padding: 0; /* Supprimer le padding sur les petits écrans */
     }
 }
