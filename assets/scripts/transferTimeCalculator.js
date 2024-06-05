@@ -12,6 +12,9 @@ function calculateTransferTime() {
         case 'GB':
             dataSize *= 1024; // Convertir de Go en Mo
             break;
+        case 'TB':
+            dataSize *= 1024 * 1024; // Convertir de To en Mo
+            break;
     }
 
     // Convertir la vitesse en MBps

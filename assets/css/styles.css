@@ -48,10 +48,10 @@ nav ul li a {
     text-decoration: none;
     color: white;
     font-weight: bold;
+    padding: 5px 10px;
 }
 
 li a:hover {
-    padding: 5px 10px;
     background-color: rgba(255, 255, 255, 0.248);
     color: #fff;
     text-decoration: none;
@@ -63,6 +63,10 @@ main {
     padding: 20px;
     min-height: 400px; /* Hauteur minimale */
     text-align: center;
+}
+
+img {
+    border-radius: 20px;
 }
 
 footer {
